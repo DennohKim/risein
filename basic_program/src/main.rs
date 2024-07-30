@@ -1,14 +1,20 @@
 fn main() {
    
-   let s1: &str = "Chizaa";
-   let s2: &str ="Kim";
-   
-    concatenate_strings(s1, s2);
+   let string1: &str = "Chizaa";
+   let string2: &str ="Kim";
+
+    concatenate_strings(string1, string2);
 }
 
-fn concatenate_strings(s1: &str, s2: &str) -> String{   
-     println!("{} {}", s1, s2);
+fn concatenate_strings(string1: &str, string2: &str) -> String{   
 
-    format!("{} {}", s1, s2)
+     let mut result = String::from(string1);
+
+     result.push_str(string2);
+
+     println!("{}", result);
+     
+     result
+
 
 }
